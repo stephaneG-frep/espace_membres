@@ -26,7 +26,7 @@ $mail->isHTML(true);
 
 $mail->Subject = 'Confirmation d\' email';
 $mail->Body = 'Pour valider, merci de cliquer sur le lien suivant :
-<a href="localhost/espace_menbres/verification.php?email='.$_POST['email']
+<a href="localhost/espace_membres/verification.php?email='.$_POST['email']
 .'&token='.$token.'"> Confirmation</a>';
 
 $mail->SMTPDebug = 0;

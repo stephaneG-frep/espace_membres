@@ -50,6 +50,7 @@
           ?>
             <button type="button" class="btn btn-danger btn-outline mx-2"><a href="deconnexion.php"> Deconnexion</a></button>
             <button type="button" class="btn btn-danger btn-outline mx-2"><a href="profil.php">Profil</a></button>
+            <button type="button" class="btn btn-warning btn-outline mx-2"><a href="euro_million.html">EuroMillion</a></button>
           <?php
           } else { ?>
             

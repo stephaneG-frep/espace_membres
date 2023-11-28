@@ -27,7 +27,7 @@ $mail->isHTML(true);
 $mail->Subject = 'Réinitialisation du mot de passe';
 $mail->Body = 'Afin de réinitialiser votre mot de passe,
 merci de cliquer sur le lien suivant :
-<a href="localhost/espace_menbres/new_password.php?email='.$_POST['email']
+<a href="localhost/espace_membres/new_password.php?email='.$_POST['email']
 .'&token='.$token.'">Réinitialisation du mot de passe</a>';
 
 $mail->SMTPDebug = 0;
