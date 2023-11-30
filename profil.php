@@ -1,12 +1,26 @@
 <?php require 'include/header.php'; ?>
-<title>Profil</title>
+<title>Profil de <?= $req_user['username'] ?></title>
 </head><body>
 </div>
 <?php
-   
+    $bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
     //session_start();
-    if(isset($_SESSION['id']))
-    {
+    if(isset($_SESSION['id'])){
+
+    $req = $bdd->prepare('SELECT * FROM menbres.table_menbres
+    WHERE id = ?');
+    $req->execute([$_SESSION['id']]);
+    $req_user = $req->fetch();
+
+    switch($req_user['role']){
+        case 0:
+            $role = 'utilisateur';
+    break;
+        case 1:
+            $role = 'admin';
+    break;
+    }
+
 ?>
     <div id="login">
         <h1 class="text-center text-white pt-5">Profil</h1>
@@ -24,6 +38,11 @@
                     <tr>
                         <td>Adresse email:  </td><td><?=$_SESSION['email'] ?></td>
                     </tr>
+
+                    <tr>
+                        <td>Role:  </td><td><?= $role ?></td>
+                    </tr>
+
 
 
                     <tr>
