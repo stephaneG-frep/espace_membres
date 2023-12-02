@@ -46,6 +46,8 @@ if(isset($_POST['connexion'])){
             $_SESSION['username'] = $result['username'];
             $_SESSION['email'] = $email;
 
+            $_SESSION['role'] = $result['role'];
+
             if(isset($_POST['sesouvenir']))
             {
                 setcookie("email", $_POST['email']);

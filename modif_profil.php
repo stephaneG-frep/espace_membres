@@ -3,7 +3,7 @@
 </head><body>
 </div>
 <?php 
-session_start();
+
 
 if(isset($_POST['modification']) AND isset($_SESSION['id']))
 { 
@@ -58,7 +58,6 @@ else
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
 
-
                     <center><div class="container" style="background-color:#FB6969;">
                         <font color="#8B0505"> <?php if(isset($message))echo $message; ?> </font>
                         </div></center>
@@ -66,7 +65,6 @@ else
                         <center><div class="container" style="background-color:#95D588;">
                         <font color="#115702"> <?php if(isset($message1))echo $message1; ?> </font>
                         </div></center>
-
 
                         <form id="login-form" class="form" action="" method="post">
 
@@ -91,10 +89,6 @@ else
                             <a href="index.php" class="btn btn-info btn-md">Se connecter</a>
 
                         </div>
-
-
-
-
                         </form>
                     </div>
                 </div>

@@ -21,23 +21,23 @@
     <li class="nav-item mx-2"><a class="nav-link text-light" href="redaction.php">Commentaires</a></li>
     <li class="nav-item mx-2"><a class="nav-link text-light" href="zindex.php">Vos commentares</a></li>
     </ul>
- 
+
     <ul class="navbar-nav">
   
     <?php
     if(isset($_SESSION['id'])){
     ?>
-    <button type="button" class="btn btn-danger btn-outline mx-2"><a href="deconnexion.php"> Deconnexion</a></button>
-    <button type="button" class="btn btn-danger btn-outline mx-2"><a href="profil.php">Profil</a></button>
+    <button type="button" class="btn btn-outline-danger mx-2"><a href="deconnexion.php"> Deconnexion</a></button>
+    <button type="button" class="btn btn-outline-secondary mx-2"><a href="profil.php">Profil</a></button>
     <?php
     }
     else{ ?>
-      <button type="button" class="btn btn-warning btn-outline mx-2"><a href="inscription.php">Inscription</a></button>
-      <button type="button" class="btn btn-warning btn-outline mx(2"><a href="connexion.php">Connexion</a></button>
+      <button type="button" class="btn btn-outline-warning mx-2"><a href="inscription.php">Inscription</a></button>
+      <button type="button" class="btn btn-warning btn-outline mx-2"><a href="connexion.php">Connexion</a></button>
     </ul>
     </nav>
     </form>
-  
+ 
   
     </div>
     <?php

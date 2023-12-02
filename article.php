@@ -8,13 +8,19 @@ $bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
 if(isset($_GET['id']) AND !empty($_GET['id'])) {
     $get_id = htmlspecialchars($_GET['id']);
 
-    $article = $bdd->prepare('SELECT * FROM menbres.article WHERE id = ?');
+    $article = $bdd->prepare('SELECT * FROM menbres.article  WHERE id = ?');
     $article->execute(array($get_id));
+
+    $requete = $bdd->prepare('SELECT * FROM menbres.article WHERE id_menbres = ?');
+    $requete->execute(array($get_id_menbres));
+    $username = $requete->fetch();
 
     if($article->rowCount() == 1) {
         $article = $article->fetch();
         $titre = $article['titre'];
         $contenu = $article['contenu'];
+        $username = $article['id_menbres'];
+
     } else {
         die('Ce commentaire n\'éxiste pas ! ');
     }
@@ -61,6 +67,10 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
         <caption><h1>Tous vos messages</h1> </caption>
         <thead>
             <tr>
+
+                <th><h1><?= $username ?></h1><br/></th>
+                <th>              </th>
+
                 <th><h1><?= $titre ?></h1><br/></th>
                 <th>              </th>
                 <th><p><?= $contenu ?></p></th>

@@ -48,8 +48,15 @@
           <?php
           if (isset($_SESSION['id'])) {
           ?>
-            <button type="button" class="btn btn-danger btn-outline mx-2"><a href="deconnexion.php"> Deconnexion</a></button>
-            <button type="button" class="btn btn-danger btn-outline mx-2"><a href="profil.php">Profil</a></button>
+            <button type="button" class="btn btn-outline-danger mx-2"><a href="deconnexion.php"> Deconnexion</a></button>
+            <button type="button" class="btn btn-outline-secondary mx-2"><a href="profil.php">Profil</a></button>
+            <?php
+            if(in_array($_SESSION['role'],[1])){
+            ?>
+            <button type="button" class="btn text-warning bg-light btn-outline mx-2"><a href="admin.php">Admin</a></button>
+            <?php 
+            }
+            ?>
             <button type="button" class="btn btn-warning btn-outline mx-2"><a href="euro_million.html">EuroMillion</a></button>
           <?php
           } else { ?>
@@ -57,7 +64,7 @@
 
             <li class="nav-item mx-2"><a class="nav-link text-danger" href="">••[»»» Inscrivez-vous, n'hésitez plus. ••[»»»</a></li>
 
-            <button type="button" class="btn btn-warning btn-outline mx-2"><a href="inscription.php">Inscription</a></button>
+            <button type="button" class="btn btn-outline-warning mx-2"><a href="inscription.php">Inscription</a></button>
             <button type="button" class="btn btn-warning btn-outline mx(2"><a href="connexion.php">Connexion</a></button>
         </ul>
     </nav>
