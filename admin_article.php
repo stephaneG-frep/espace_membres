@@ -1,3 +1,4 @@
+
 <?php
 
 $bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
@@ -27,6 +28,10 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
                 display: flex;
                 justify-content: center;
              }
+             .ul{
+                display: flex;
+                justify-content: center;
+             }
         </style>
     </head>
 <nav id="topnav">
@@ -39,12 +44,13 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
 
         <body>
         <div class="container">
-            <ul>
+            <ul class="ul">
                 <?php while($a = $article->fetch()) { ?>
                 <li><a href="article.php?id=<?= $a['id'] ?>">
-                <?= $a['titre'] ?></li>
+                <?= $a['titre'] ?><a href="supprime_article.php?id=<?= $a['id']; ?>" 
+                style="font-size: 1rem; margin-left: 10px;">Supprimer</a></div></li>
                 <?php } ?>
-            </ul>
+            </ul>            
         </div>
         </body>
 </html>

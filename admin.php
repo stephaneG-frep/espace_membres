@@ -52,7 +52,9 @@ if(!in_array($_SESSION['role'], [1, 2])){
 
                 </table>
 
-                <a href="niveau_admin.php">Modifier le role d'un membres</a>
+                <a href="niveau_admin.php">Supprimer ou modifier le role d'un membres</a>
+                </br>
+                <a href="admin_article.php">Supprimer des articles</a>
 
 <?php
 
