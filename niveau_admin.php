@@ -67,9 +67,9 @@ if(!in_array($_SESSION['role'], [1])){
             <div id="login-column" class="col-md-6">
             <div id="login-box" class="col-md-12">
 
-                    <center><div class="container" style="background-color: red;">
-                        <font color="white"><?php if(isset($message))echo $message; ?></font>
-                        </div></center> 
+        <center><div class="container" style="background-color: red;">
+            <font color="white"><?php if(isset($message))echo $message; ?></font>
+            </div></center> 
 
                 <?php 
                 foreach($req_list_user as $r){
