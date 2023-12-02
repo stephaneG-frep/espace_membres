@@ -3,7 +3,7 @@
 </head><body>
 </div>
 <?php
-if(!in_array($_SESSION['role'], [1])){
+if(!in_array($_SESSION['role'], [1, 2])){
     header('Location: connexion.php');
     exit;
 }

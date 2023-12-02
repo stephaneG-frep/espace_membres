@@ -1,9 +1,9 @@
 <?php require 'include/header.php'; ?>
 <title>Changement de role</title>
-</head><body>
+</head><body style="background-color: #B5C99A;">
 </div>
 <?php
-if(!in_array($_SESSION['role'], [1])){
+if(!in_array($_SESSION['role'], [1, 2])){
     header('Location: connexion.php');
     exit;
 }
@@ -57,50 +57,44 @@ if(!in_array($_SESSION['role'], [1])){
 
 ?>
 
-<div id="login">
-        <h1 class="text-center text-white pt-5">Page de changement de niveau du role  </h1>
-        <div class="container">
+
+        <h1 class="text-center pt-5" style="color:darkgreen">Page de changement de niveau du role  </h1>
 
 
-            
-            <div id="login-row" class="row justify-content-center align-items-center">
-            <div id="login-column" class="col-md-6">
-            <div id="login-box" class="col-md-12">
+    <div class="container">
 
         <center><div class="container" style="background-color: red;">
             <font color="white"><?php if(isset($message))echo $message; ?></font>
             </div></center> 
 
-                <?php 
-                foreach($req_list_user as $r){
-                ?>
-                <form id="login-form" class="form" action="" method="post">
+        <?php 
+        foreach($req_list_user as $r){
+        ?>
+            <form id="login-form" class="form" action="" method="post">
                 <div style="margin: 15px;">
-                <div style="color:#994D1C; font-weight: bold; font-size: 2rem"> <?= $r['username']?></div>
+                <div style="color:#994D1C; font-weight: bold; font-size: 2rem"> <?= $r['username']?>
+                <a href="supprimer.php?id=<?= $r['id']; ?>" 
+                style="font-size: 1rem;">Supprimer</a></div>
                 </br>                  
-                <select name="role">
+            <select name="role">
                     <option value="<?= $r['role']?>" hidden><?= $r['libelle']?></option>
-                    <?php
-                        foreach($tab_liste_role as $tr){
-                    ?>
-                    <option value="<?= $tr['0']?>"><?= $tr['1']?></option>
-                    <?php
-                    }
-                    ?>
-                </select>
+        <?php
+        foreach($tab_liste_role as $tr){
+        ?>
+            <option value="<?= $tr['0']?>"><?= $tr['1']?></option>
+        <?php
+        }
+        ?>
+            </select>
                 </br>
                 <input type="hidden" name="id_user" value="<?= $r['id']?>" />
                 <button type="submit" name="modifier" style="margin: 15px;">Modifier</button>
                 </br>
                 </div>
-                </form>
+            </form>
 <?php
     }
 ?>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
 </body>
 </html>                 
