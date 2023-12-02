@@ -47,7 +47,6 @@ if(isset($_POST['titre'], $_POST['contenu'])) {
  <nav id="topnav">
          <a id="logo" class="nav-link" href="index.php">Accueil</a>
          <a class="nav-link" href="zindex.php">Listes</a>
-         <a class="nav-link" href="#">Link 2</a>
 
          <a id="about" class="nav-link" href="admin.php">Admin</a>
       </nav>
