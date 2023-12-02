@@ -56,7 +56,7 @@ else
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
+                    <div id="login-box" class="col-md-12" style="background-color:darkkhaki;">
 
                     <center><div class="container" style="background-color:#FB6969;">
                         <font color="#8B0505"> <?php if(isset($message))echo $message; ?> </font>
@@ -69,18 +69,18 @@ else
                         <form id="login-form" class="form" action="" method="post">
 
                         <div class="form-group">
-                            <label for="username" class="text-info">Username</label><br>
+                            <label for="username" class="text-info text-dark">Username</label><br>
                             <input type="text" name="username" id="username" class="form-control">
                         </div>
 
                         
                         <div class="form-group">
-                            <label for="password" class="text-info">Mot de passe</label><br>
+                            <label for="password" class="text-info text-dark">Mot de passe</label><br>
                             <input type="password" name="password" id="password" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="password2" class="text-info">Confirmation du mot de passe</label><br>
+                            <label for="password2" class="text-info text-dark">Confirmation du mot de passe</label><br>
                             <input type="password" name="password2" id="password2" class="form-control">
                         </div>
 

@@ -1,6 +1,6 @@
 <?php require 'include/header.php'; ?>
 <title>Profil de <?= $req_user['username'] ?></title>
-</head><body>
+</head><body style="background-color: darkslateblue;">
 </div>
 <?php
 if(!in_array($_SESSION['role'], [1, 2])){
@@ -33,10 +33,10 @@ if(!in_array($_SESSION['role'], [1, 2])){
         <h1 class="text-center text-white pt-5">Page admin de <?= $req_user['username'] ?> </h1>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
+                <div id="login-column" class="col-md-6" style="color:darkred">
+                    <div id="login-box" class="col-md-12" style="background-color:burlywood;">
 
-                <table>
+                <table style="margin: 15px; font-size: 1.4rem">
                     <tr>
                         <td>Nom d'utilisateur: </td><td><?=$_SESSION['username'] ?></td>
                     </tr>                    
@@ -52,9 +52,10 @@ if(!in_array($_SESSION['role'], [1, 2])){
 
                 </table>
 
-                <a href="niveau_admin.php">Supprimer ou modifier le role d'un membres</a>
+                <a href="niveau_admin.php" style="margin:10px">Supprimer ou modifier le role d'un membres</a>
                 </br>
-                <a href="admin_article.php">Supprimer des articles</a>
+                <a href="admin_article.php" style="margin: 10px;">Supprimer des articles</a>
+                </br>
 
 <?php
 

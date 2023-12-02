@@ -27,10 +27,10 @@
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
+                    <div id="login-box" class="col-md-12" style="background-color: slategrey;">
 
 
-                <table>
+                <table style="margin: 20px; font-size: 1.4rem; font-weight: bold">
                     <tr>
                         <td>Nom d'utilisateur: </td><td><?=$_SESSION['username'] ?></td>
                     </tr>

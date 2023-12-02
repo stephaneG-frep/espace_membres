@@ -21,11 +21,12 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
                 height: 100vh;
              }
              .container{
+                margin-left: 100px;
                 margin-top: 100px;
                 height: auto;
                 width: auto;
                 display: flex;
-                justify-content: center;
+                justify-items: flex-start;
              }
         </style>
     </head>
@@ -38,10 +39,12 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
       </nav>
 
         <body>
+        
         <div class="container">
+        <h1 style="color:darkslateblue">Liste des messages</h1>
             <ul>
                 <?php while($a = $article->fetch()) { ?>
-                <li><a href="article.php?id=<?= $a['id'] ?>">
+                <li style="color:burlywood; font-size: 1.4rem"><a style="color: lightgreen;"  href="article.php?id=<?= $a['id'] ?>">
                 <?= $a['titre'] ?></li>
                 <?php } ?>
             </ul>

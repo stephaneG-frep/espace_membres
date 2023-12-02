@@ -83,7 +83,7 @@ if(isset($_POST['connexion'])){
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
+                    <div id="login-box" class="col-md-12" style="background-color: darkkhaki;">
 
 
                     <center><div class="container" style="background-color: red;">
@@ -98,19 +98,19 @@ if(isset($_POST['connexion'])){
                         <form id="login-form" class="form" action="" method="post">
 
                         <div class="form-group">
-                            <label for="email" class="text-info">Adresse Email</label><br>
+                            <label for="email" class="text-info text-white bg-dark">Adresse Email</label><br>
                             <input type="email" name="email" id="email" class="form-control"
                             value = <?php if(isset($_COOKIE['email'])) {echo $_COOKIE['email'];} ?> >
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="text-info">Mot de passe</label><br>
+                            <label for="password" class="text-info text-white bg-dark">Mot de passe</label><br>
                             <input type="password" name="password" id="password" class="form-control"
                             value = <?php if(isset($_COOKIE['password'])) {echo $_COOKIE['password'];} ?> >
                         </div>
 
                         <div class="form-group">
-                            <label for="sesouvenir" class="text-info">Se souvenir de moi
+                            <label for="sesouvenir" class="text-info text-dark">Se souvenir de moi
                             <input type="checkbox" name="sesouvenir"
                             id="sesouvenir"></label>
                         </div>
