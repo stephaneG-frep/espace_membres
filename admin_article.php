@@ -47,9 +47,11 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
                 <?php while($a = $article->fetch()) { ?>
                 <li style="margin-left: 20px; font-size: 2rem"><a href="article.php?id=<?= $a['id'] ?>">
                 <?= $a['titre'] ?><a href="supprime_article.php?id=<?= $a['id']; ?>" 
-                style="font-size: 2rem; margin: 10px;">Supprimer</a></div></li>
+                style="font-size: 1.2rem; margin-left: 20px;">Supprimer</a></div></li>
                 <?php } ?>
             </ul>            
         </div>
-        </body>
+
+    
+    </body>
 </html>

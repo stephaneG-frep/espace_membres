@@ -121,7 +121,6 @@ else
                         <div class="form-group">
                             <input type="submit" name="inscription" class="btn btn-info btn-md" value="s'inscrire">
                             <a href="connexion.php" class="btn btn-info btn-md">Se connecter</a>
-
                         </div>
 
                         </form>
@@ -129,8 +128,6 @@ else
                 </div>
             </div>
         </div>
-    </div>
-
-    
+    </div>   
     </body>
 </html>

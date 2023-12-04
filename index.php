@@ -1,5 +1,5 @@
 <?php require 'include/header.php';
-    require 'include/footer.php'; ?>
+     ?>
 
 <title>Accueil</title>
 </head><body>
@@ -14,6 +14,7 @@
     <canvas></canvas>
 
 <script src="include/app.js"></script>
+
 
 
 </body>

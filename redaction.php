@@ -15,7 +15,7 @@ if(isset($_POST['titre'], $_POST['contenu'])) {
 
         $message = "Contenu posté !";
     } else {
-        $message = " Remplire tous les champs !";
+        $message = " Remplir tous les champs !";
     }
 }
 ?>
@@ -77,6 +77,8 @@ if(isset($_POST['titre'], $_POST['contenu'])) {
           </div></center> 
           <br />
 
+          
+          
         
         </body>
 </html>

@@ -68,14 +68,12 @@
             <button type="button" class="btn btn-warning btn-outline mx(2"><a href="connexion.php">Connexion</a></button>
         </ul>
     </nav>
-    </form>
-
-
-  </div>
-<?php
-
-          }
+    <?php
+}
 ?>
+    </form>
+  </div>
+
 
 
 

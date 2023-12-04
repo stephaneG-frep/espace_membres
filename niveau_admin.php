@@ -1,4 +1,4 @@
-<?php require 'include/header.php'; ?>
+<?php require 'include/header.php';?>;
 <title>Changement de role</title>
 </head><body style="background-color: #B5C99A;">
 </div>
@@ -57,7 +57,6 @@ if(!in_array($_SESSION['role'], [1, 2])){
 
 ?>
 
-
         <h1 class="text-center pt-5" style="color:darkgreen">Page de changement de niveau du role  </h1>
 
 
@@ -96,5 +95,7 @@ if(!in_array($_SESSION['role'], [1, 2])){
     }
 ?>
     </div>
+
+    
 </body>
 </html>                 

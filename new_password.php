@@ -114,5 +114,7 @@ if(!empty($email) && !empty($token)){
             </div>
         </div>
     </div>
+
+    
     </body>
 </html>
