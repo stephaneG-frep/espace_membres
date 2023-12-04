@@ -9,3 +9,4 @@ appli en php, bootstrap, html, css, javascript.
 phpmailer pour les emails de confirmation d'inscription,validation ou perte de password.
 désolé pour les fautes d'orthographe(menbres) avec un N
 un espace admin mis en place pour supprimer des articles ou des membres
+une appli phone en react-native est livrée avec 
