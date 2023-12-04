@@ -57,7 +57,7 @@
             <?php 
             }
             ?>
-            <button type="button" class="btn btn-warning btn-outline mx-2"><a href="euro_million.html">EuroMillion</a></button>
+            <button type="button" class="btn btn-warning btn-outline mx-2"><a href="euro_million.html">Euro-Millions</a></button>
           <?php
           } else { ?>
             
