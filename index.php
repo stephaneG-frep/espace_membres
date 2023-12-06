@@ -3,6 +3,38 @@
 
 <title>Accueil</title>
 </head><body>
+
+<style>
+    p, h3{
+  animation-duration: 6s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+    h1, h5{
+    animation-duration: 3s;
+    animation-name: slideout;;
+  }
+  @keyframes slideout {
+  from {
+    margin-top: 100%;
+    width: 300%;
+  }
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
+
+</style>
 </div>
 <h1 class="text-center text-white pt-5">Page d'Accueil</h1>
 </br>
