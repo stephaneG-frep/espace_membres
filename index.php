@@ -20,7 +20,7 @@
   }
 }
     h1, h5{
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-name: slideout;;
   }
   @keyframes slideout {

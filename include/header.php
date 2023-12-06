@@ -33,6 +33,21 @@
     #login .container #login-row #login-column #login-box #login-form #register-link {
       margin-top: -85px;
     }
+
+    .navbar{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
   </style>
 
   <div class="navbar navbar-expand navbar-dark bg-dark">

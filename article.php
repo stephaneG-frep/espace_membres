@@ -14,6 +14,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
 
     if($article->rowCount() == 1) {
         $article = $article->fetch();
+        $username = $article['username'];
         $titre = $article['titre'];
         $contenu = $article['contenu'];
 
@@ -65,6 +66,9 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
         <thead>
             <tr>
 
+                
+                <th><h1 style="color: darkred;"><?= $username ?></h1><br/></th>
+                <th>              </th>
                 <th><h1 style="color: darkred;"><?= $titre ?></h1><br/></th>
                 <th>              </th>
                 <th><p style="font-size: 1.6rem"><?= $contenu ?></p></th>

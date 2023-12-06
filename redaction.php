@@ -5,13 +5,14 @@ $bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
 //$bdd = new PDO("mysql:host=localhost;dbname=articles;charset=utf8", "root", "");
 
 if(isset($_POST['titre'], $_POST['contenu'])) {
-    if(!empty($_POST['titre']) AND !empty($_POST['contenu'])) {
+    if(!empty($_POST['titre']) AND !empty($_POST['contenu']) AND !empty($_POST['username'])) {
+        $username = htmlspecialchars($_POST['username']);
         $titre = htmlspecialchars($_POST['titre']);
         $contenu = htmlspecialchars($_POST['contenu']);
 
-        $ins = $bdd->prepare('INSERT INTO menbres.article (titre, contenu, date_creation)
-        VALUES (?, ?, NOW())');
-        $ins->execute(array($titre, $contenu));
+        $ins = $bdd->prepare('INSERT INTO menbres.article (username, titre, contenu, date_creation)
+        VALUES (?, ?, ?, NOW())');
+        $ins->execute(array($username, $titre, $contenu));
 
         $message = "Contenu posté !";
     } else {
@@ -62,6 +63,7 @@ if(isset($_POST['titre'], $_POST['contenu'])) {
 
 <div class="container">
             <form method="post">
+                <input class="area" type="text" name="username" placeholder="username" /></br>
                 <input class="area" type="text" name="titre" placeholder="titre" /><br/>
                 <textarea class="area" name="contenu" placeholder="Contenu de l'article"></textarea><br/>
                 <input class="send" type="submit" value="Envoyer" />
