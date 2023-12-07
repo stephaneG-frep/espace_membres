@@ -2,7 +2,7 @@
 
 $bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
 
-//$bdd = new PDO("mysql:host=localhost;dbname=articles;charset=utf8", "root", "");
+
 
 
 if(isset($_GET['id']) AND !empty($_GET['id'])) {
@@ -49,6 +49,9 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
                 width: auto;
                 display: flex;
                 justify-content: center;
+             }
+             .table{
+                background-color: darkgray;
              }
         </style>
     </head>

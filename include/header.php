@@ -35,7 +35,7 @@
     }
 
     .navbar{
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-name: slidein;
 }
 @keyframes slidein {

@@ -30,7 +30,7 @@
                     <div id="login-box" class="col-md-12" style="background-color: slategrey;">
 
 
-                <table style="margin: 20px; font-size: 1.4rem; font-weight: bold">
+                <table style="margin: 20px; font-size: 1rem; font-weight: bold">
                     <tr>
                         <td>Nom d'utilisateur: </td><td><?=$_SESSION['username'] ?></td>
                     </tr>

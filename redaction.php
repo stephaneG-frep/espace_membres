@@ -2,11 +2,24 @@
 
 $bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
 
-//$bdd = new PDO("mysql:host=localhost;dbname=articles;charset=utf8", "root", "");
 
-if(isset($_POST['titre'], $_POST['contenu'])) {
-    if(!empty($_POST['titre']) AND !empty($_POST['contenu']) AND !empty($_POST['username'])) {
+
+if(isset($_POST['username'], $_POST['titre'], $_POST['contenu'])) {
+    if(!empty($_POST['username']) AND !empty($_POST['titre']) AND !empty($_POST['contenu'])) {
         $username = htmlspecialchars($_POST['username']);
+
+      /*
+        $requete = $bdd->prepare("SELECT * FROM menbres.table_menbres WHERE username=?");
+        $requete->execute([$username]); 
+        $user = $requete->fetch();
+          if (!$user) {
+          
+            $message = "username invalide...";
+        } 
+        */
+
+
+
         $titre = htmlspecialchars($_POST['titre']);
         $contenu = htmlspecialchars($_POST['contenu']);
 
@@ -14,6 +27,7 @@ if(isset($_POST['titre'], $_POST['contenu'])) {
         VALUES (?, ?, ?, NOW())');
         $ins->execute(array($username, $titre, $contenu));
 
+    
         $message = "Contenu posté !";
     } else {
         $message = " Remplir tous les champs !";

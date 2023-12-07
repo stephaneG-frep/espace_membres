@@ -36,7 +36,7 @@ if(!in_array($_SESSION['role'], [1, 2])){
                 <div id="login-column" class="col-md-6" style="color:darkred">
                     <div id="login-box" class="col-md-12" style="background-color:burlywood;">
 
-                <table style="margin: 15px; font-size: 1.4rem">
+                <table style="margin: 15px; font-size: 1rem">
                     <tr>
                         <td>Nom d'utilisateur: </td><td><?=$_SESSION['username'] ?></td>
                     </tr>                    
