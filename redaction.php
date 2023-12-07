@@ -45,7 +45,7 @@ if(isset($_POST['username'], $_POST['titre'], $_POST['contenu'])) {
              body{
                 margin: 0;
                 padding: 0;
-                background-color: #147AF5; 
+                background-color: #4c956c; 
                 height: 100vh;
              }
 
@@ -56,6 +56,9 @@ if(isset($_POST['username'], $_POST['titre'], $_POST['contenu'])) {
                 width: auto;
                 display: flex;
                 justify-content: center;
+             }
+             .area{
+              border: 3px double #ba181b;
              }
         </style>
     </head>    
@@ -68,12 +71,7 @@ if(isset($_POST['username'], $_POST['titre'], $_POST['contenu'])) {
 
         <body>
 
-        <center><div style="background-color:red">
-            <font color="white"> 
-              <?php if(isset($message)) echo $message;?> 
-            </font>
-          </div></center> 
-          <br />
+       
 
 <div class="container">
             <form method="post">

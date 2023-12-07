@@ -17,7 +17,7 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
             body{
                 margin: 0;
                 padding: 0;
-                background-color: #147AF5; 
+                background-color: #006466; 
                 height: 100vh;
              }
              .container{
@@ -41,7 +41,7 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
         <body>
         
         <div class="container">
-        <h1 style="color:darkslateblue">Liste des messages</h1>
+        <h1 style="color:cadetblue">Liste des messages</h1>
             <ul>
                 <?php while($a = $article->fetch()) { ?>
                 <li style="color:burlywood; font-size: 1.4rem"><a style="color: lightgreen;"  href="article.php?id=<?= $a['id'] ?>">
