@@ -89,7 +89,7 @@ if(isset($_POST['username'], $_POST['titre'], $_POST['contenu'])) {
 <br />
                 <input class="area" type="text" name="username" placeholder="username" /></br>
                 <input class="area" type="text" name="titre" placeholder="titre" /><br/>
-                <textarea class="area" name="contenu" placeholder="Contenu de l'article"></textarea><br/>
+                <textarea class="area" name="contenu" placeholder="Contenu de l'article : vous pouvez m'agrandir"></textarea><br/>
                 <input class="send" type="submit" value="Envoyer" />
 <center>
   <div class="area" style="background-color: red;">
