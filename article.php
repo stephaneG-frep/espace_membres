@@ -76,8 +76,6 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
         <caption><h1>Tous vos messages</h1> </caption>
         <thead>
             <tr>
-
-                
                 <th><h1 style="color: #52796f; font-size: 1.2rem"><?= $username ?></h1><br/></th>
                 <th>              </th>
                 <th><h1 style="color: #073b4c; font-size: 1.4rem"><?= $titre ?></h1><br/></th>
