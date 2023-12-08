@@ -1,6 +1,7 @@
 <?php
 session_start();
-$bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
+require 'include/start_bdd.php';
+//$bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
 if(isset($_GET['id']) AND !empty($_GET['id'])){
     $getid = $_GET['id'];
     $recupArticle = $bdd->prepare('SELECT * FROM menbres.article WHERE id = ?');

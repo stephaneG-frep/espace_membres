@@ -18,7 +18,7 @@ CREATE TABLE recup_password(
 
 CREATE TABLE article(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    //id_menbres INT(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
     titre varchar(255) NOT NULL,
     contenu TEXT NOT NULL,
     date_creation DATETIME NOT NULL

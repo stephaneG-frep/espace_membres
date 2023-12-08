@@ -1,7 +1,8 @@
 
 <?php
+require "include/start_bdd.php";
 
-$bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
+//$bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
 
 
 $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DESC');
@@ -34,7 +35,7 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
         </style>
     </head>
 <nav id="topnav">
-         <a id="logo" class="nav-link" href="index.php">Accuiel</a>
+         <a id="logo" class="nav-link" href="index.php">Accueil</a>
          <a class="nav-link" href="redaction.php">Rédaction</a>
          <a class="nav-link" href="zindex.php">Listes</a>
 

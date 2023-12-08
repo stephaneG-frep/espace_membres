@@ -8,7 +8,7 @@ if(!in_array($_SESSION['role'], [1, 2])){
     exit;
 }
     $bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
- 
+
     if(isset($_SESSION['id'])){
 
     $req = $bdd->prepare('SELECT u.*, ar.libelle FROM 

@@ -1,4 +1,6 @@
-<?php require 'include/header.php'; ?>
+<?php require 'include/header.php';
+require "include/start_bdd.php"; ?>
+
 <title>Profil de <?= $req_user['username'] ?></title>
 </head><body style="background-color: darkslateblue;">
 </div>
@@ -7,7 +9,7 @@ if(!in_array($_SESSION['role'], [1, 2])){
     header('Location: connexion.php');
     exit;
 }
-    $bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
+    //$bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
     //session_start();
     if(isset($_SESSION['id'])){
 

@@ -1,6 +1,7 @@
 <?php
+require "include/start_bdd.php";
 
-$bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
+//$bdd = new PDO("mysql:host=localhost;dbname=menbres;charset=utf8", "root", "");
 
 
 
@@ -35,7 +36,6 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
         <meta charset="utf_8">
         <link rel="stylesheet" href="include/article.css">
 
-
     <style>
     body{
         margin: 0;
@@ -51,9 +51,12 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
         justify-content: center;
     }
     .table{
+        margin: 40px;
         background-color: darkgray;
+        border: 3px solid rgb(27, 42, 65);
     }
     h1{
+        margin-bottom: 50px;
         color: #023047;
         font-size: 3rem;;
     }
