@@ -35,7 +35,7 @@ $article  = $bdd->query('SELECT * FROM menbres.article ORDER BY date_creation DE
     <nav id="topnav">
         <a id="logo" class="nav-link" href="index.php">Accueil</a>
         <a class="nav-link" href="redaction.php">Rédaction</a>
-        <a class="nav-link" href="zindex.php">Listes</a>
+        <a class="nav-link" href="zindex.php">Liste</a>
         <a id="about" class="nav-link" href="admin.php">Admin</a>
     </nav>
 
