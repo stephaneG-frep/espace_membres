@@ -74,14 +74,7 @@ if(isset($_POST['username'], $_POST['titre'], $_POST['contenu'])) {
 
 <body>
 
-<center>
-  <div class="area" style="background-color: red;">
-  <font color="white">
-  <?php if(isset($message)) echo $message;?>
-  </font>
-  </div>
-</center> 
-<br />
+
 
 <div class="container">
             <form method="post">
