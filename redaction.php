@@ -7,19 +7,6 @@ require 'include/start_bdd.php';
 if(isset($_POST['username'], $_POST['titre'], $_POST['contenu'])) {
     if(!empty($_POST['username']) AND !empty($_POST['titre']) AND !empty($_POST['contenu'])) {
         $username = htmlspecialchars($_POST['username']);
-
-        if(isset($_POST['username'])) {
-        $requete = $bdd->prepare("SELECT * FROM menbres.table_menbres WHERE username = :username");
-        $requete->execute(array('username' => $username)); 
-        $result = $requete->fetch();
-          if (!$result) {
-          
-            $message = "username invalide...";
-        } 
-      }
-
-
-
         $titre = htmlspecialchars($_POST['titre']);
         $contenu = htmlspecialchars($_POST['contenu']);
 

@@ -51,7 +51,9 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
         justify-content: center;
     }
     .table{
-        margin: 40px;
+        width: 95%;
+        height: auto;
+        margin: 20px;
         background-color: darkgray;
         border: 3px solid rgb(27, 42, 65);
     }
